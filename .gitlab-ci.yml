@@ -1,0 +1,35 @@
+stages:
+  - build
+  - test
+  - release
+  - deploy
+
+build-job:
+  tags:
+    - testt
+  stage: build
+  script:
+    - echo "Creating virtual environment for the project..."
+
+test-job:
+  tags:
+    - testt
+  stage: test
+  script:
+    - echo "Activating virtual environment..."
+    - echo "All tests successfully passed."
+
+release-job:
+  tags:
+    - testt
+  stage: release
+  script:
+    - echo "Release."
+
+# Deploy petclinic
+deploy-job:
+  tags:
+    - testt
+  stage: deploy
+  script:
+    - echo "deploy."
